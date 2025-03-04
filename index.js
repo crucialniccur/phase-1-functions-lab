@@ -9,10 +9,15 @@ function distanceFromHqInBlocks(userlocation) {
     userBlocks = userlocation - 42;
   }
   return userBlocks;
+  // distance in blocks from hq
 }
 
 function distanceFromHqInFeet(userlocation) {
   return distanceFromHqInBlocks(userlocation) * 264;
+  // blocks to feet
 }
 
-function distanceTravelledInFeet() {}
+function distanceTravelledInFeet(start, destination) {
+  let travelledBlocks = Math.abs(destination - start);
+  return travelledBlocks * 264;
+}
