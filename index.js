@@ -2,14 +2,15 @@ const { use } = require("chai");
 
 // Code your solution in this file!
 function distanceFromHqInBlocks(userlocation) {
+  let userBlocks;
   if (userlocation <= 42) {
-    return 42 - userlocation;
+    userBlocks = 42 - userlocation;
   } else {
-    return userlocation - 42;
-    //  userBlocks;
+    userBlocks = userlocation - 42;
   }
+  return userBlocks;
 }
 
-function distanceFromHqInFeet() {
-  //   return userBlocks * 264;
+function distanceFromHqInFeet(userlocation) {
+  return distanceFromHqInBlocks(userlocation) * 264;
 }
